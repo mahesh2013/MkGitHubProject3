@@ -9,6 +9,14 @@
 #
 ############################################################################
 
+for (i in 1:1000) {
+  print("Wait..")
+  print(i)
+  Sys.sleep(1)
+}
+
+print("Done Wait")
+
 # load spark R packages
 library(ibmwsrspark)
 library(sparklyr)
@@ -54,3 +62,5 @@ iris_preview
 # disconnect
 spark_disconnect(sc)
 spark_disconnect_all()
+
+print("Done")
